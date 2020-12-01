@@ -1,12 +1,8 @@
-
-
 const getName = (object) => {
-    const name = object.name;
+    const { name } = object;
 
     return name;
 }
-
-
 
 
 module.exports = {
