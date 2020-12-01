@@ -2,10 +2,10 @@ const { copyAndPush } = require('./copyandpush');
 
 describe('copyAndPush function', () => {
     it('returns a new array with all the items in the original array and a new item pushed to the end', () => {
-        const numbers = [1, 2, 3]
+        const numbers = [1, 2, 3];
         const newArray = copyAndPush(numbers, 4);
 
-        // expect(newArray).toEqual([1, 2, 3, 4]);
+        expect(newArray).toEqual([1, 2, 3, 4]);
     })
 
     // it('returns the name property of an object', () => {

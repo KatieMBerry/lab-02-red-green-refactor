@@ -1,5 +1,6 @@
-const copyAndPush = () => {
-
+const copyAndPush = (array, num) => {
+    array.push(num);
+    return array;
 };
 
 
