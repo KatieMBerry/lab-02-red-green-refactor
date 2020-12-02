@@ -1,5 +1,16 @@
-const capitalizeAndFilter = () => {
+const capitalizeAndFilter = array => {
+    // const filteredArray =  array.filter(string => !string.charAt(0) === 'f');
+    // return filteredArray
+    let newArray = [];
 
+    for (let i = 0; i < array.length; i++) {
+        // let string = array[i];
+        if (array[i].charAt(0) !== 'f') {
+            newArray[newArray.length] = array[i].toUpperCase();
+            // return string.toUppercase();
+        }
+    }
+    return newArray;
 };
 
 
