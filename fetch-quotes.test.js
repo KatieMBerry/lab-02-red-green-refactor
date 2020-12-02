@@ -1,11 +1,21 @@
 const { fetchQuotes } = require('./fetch-quotes');
+const request = require('superagent');
 
 describe('fetchQuotes function', () => {
+    it('returns a single quote with the correct format', async () => {
+        const quote = {
+            character: "Bender",
+            quote: "Bite my shiny metal ass.",
+            image: "https://res.cloudinary.com/dzxqhkyqd/image/fetch/c_scale,w_500/https://res.cloudinary.com/dzxqhkyqd/image/upload/v1552429540/bender.png"
+        }
 
-
-    it('takes an array of strings, capitalize all strings, and filters out any string that starts with the letter f', () => {
-
-
-        // expect(capitalizeAndFilter(arrayOfStrings)).toEqual(['SPOT', 'ROVER', 'BINGO']);
+        const fetchedQuote = await fetchQuotes();
+        expect(fetchedQuote)
+            .toEqual(
+                {
+                    character: expect.any(String),
+                    quote: expect.any(String),
+                    image: expect.any(String)
+                });
     })
-});
+})
